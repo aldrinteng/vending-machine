@@ -1,5 +1,12 @@
 # vending-machine
 
+[Vue3 Composition](https://vuejs.org/)
+
+# Vue/CLI Version
+```
+5.0.8
+```
+
 ## Project setup
 ```
 npm install
