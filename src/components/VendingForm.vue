@@ -23,8 +23,8 @@ export default{
             
         }
     }
-    
 }
+
 function getChange(bill, owed){
     let change = bill - owed;
     let denomination = [
@@ -36,8 +36,7 @@ function getChange(bill, owed){
         {name: 'P20 bill', value: 20},
         {name: 'P10 coin', value: 10},
         {name: 'P5 coin', value: 5},
-        {name: 'P1 coin', value: 1},
-                
+        {name: 'P1 coin', value: 1},       
     ]
     if(bill < 0 || owed < 0){
         this.result.push("Avoid using negative numbers")
@@ -64,11 +63,9 @@ function getChange(bill, owed){
     this.result = []
     this.change = ''
  }
-
 </script>
 
 <template>
-    
     <form @submit.prevent="getChange(bill, owed)">
         <AppTitle title = "Vending Machine" />
 
@@ -76,8 +73,6 @@ function getChange(bill, owed){
         <input type ="number" v-model="bill" required placeholder="Enter the bill payment amount" @focus="reset()">
         <label>Owed Amount:</label>
         <input type ="number" v-model="owed" required placeholder="Enter the owed amount" @focus="reset()"> 
-        
-       
         <label> Change: {{ `${change}` }}</label>
         <div class ="result">
              {{ ` ${result.join('\n')} `}}
@@ -113,7 +108,6 @@ function getChange(bill, owed){
     font-weight: bold;
     white-space: pre-line;
  }
-
  input{
     background: #eee;
     display: block;
@@ -149,7 +143,6 @@ function getChange(bill, owed){
     opacity: 0.6;
     cursor: not-allowed;
  }
-
 
  @media (max-width: 450px) {
     form{
